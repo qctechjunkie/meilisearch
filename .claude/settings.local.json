@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.meilisearch.com)"
+      "WebFetch(domain:www.meilisearch.com)",
+      "Bash(docker ps:*)"
     ]
   }
 }
