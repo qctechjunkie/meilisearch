@@ -3,12 +3,10 @@ services:
     image: getmeili/meilisearch:latest
     container_name: meilisearch
     ports:
-      - "${PORT}:7700"
+      - "${PORT:-7700}:7700"
     environment:
       - MEILI_ENV=${MEILI_ENV:-development}
       - MEILI_MASTER_KEY=${MEILI_MASTER_KEY}
-      - PUID=${PUID}
-      - PGID=${PGID}
     volumes:
       - ${DOCKER_DATA_PATH}/meili_data:/meili_data
     restart: unless-stopped
