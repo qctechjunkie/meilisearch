@@ -1,0 +1,19 @@
+# Environment variables
+.env
+
+# Meilisearch data directory
+meili_data/
+
+# Docker volumes
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
