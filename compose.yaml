@@ -10,3 +10,9 @@ services:
     volumes:
       - ${DOCKER_DATA_PATH}/meili_data:/meili_data
     restart: unless-stopped
+  meilisearch-ui:
+    image: eyeix/meilisearch-ui:latest
+    container_name: meilisearch-ui
+    ports:
+      - "24900:24900"
+    restart: unless-stopped
