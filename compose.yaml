@@ -13,6 +13,10 @@ services:
   meilisearch-ui:
     image: eyeix/meilisearch-ui:latest
     container_name: meilisearch-ui
+    environment:
+      - SINGLETON_MODE=true
+      - SINGLETON_HOST=http://meilisearch:7700
+      - SINGLETON_API_KEY=${MEILI_MASTER_KEY}
     ports:
       - "24900:24900"
     restart: unless-stopped
