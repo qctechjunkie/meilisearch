@@ -1,6 +1,6 @@
 services:
   meilisearch:
-    image: getmeili/meilisearch:latest
+    image: getmeili/meilisearch:${MEILI_VERSION:-latest}
     container_name: meilisearch
     ports:
       - "${PORT:-7700}:7700"
@@ -11,7 +11,7 @@ services:
       - ${DOCKER_DATA_PATH}/meili_data:/meili_data
     restart: unless-stopped
   meilisearch-ui:
-    image: eyeix/meilisearch-ui:latest
+    image: eyeix/meilisearch-ui:${MEILI_UI_VERSION:-latest}
     container_name: meilisearch-ui
     environment:
       - SINGLETON_MODE=true
